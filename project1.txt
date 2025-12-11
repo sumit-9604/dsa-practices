@@ -1,0 +1,33 @@
+                +------------------+
+                |    Transaction   |
+                +------------------+
+                | - amount         |
+                | - date           |
+                | - category       |
+                | - mode           |
+                +------------------+
+                         ^
+                         |
+         +---------------+----------------+
+         |                                |
++----------------+              +----------------+
+|     Income     |              |    Expense     |
++----------------+              +----------------+
+| - source       |              | - type         |
+| +recordIncome()|              | +recordExpense()|
++----------------+              +----------------+
+
++------------------+        +------------------+         +------------------+
+|  BudgetPlanner   |        |   FileManager    |         | SmartAnalyzer    |
++------------------+        +------------------+         +------------------+
+| - totalIncome    |        | +saveToFile()    |         | +analyzeTrends() |
+| - totalExpense   |                                         |
+| - monthlyLimit   |                                         |
+| +calculateBudget()|                                        |
+| +operator-()      |                                        |
++------------------+                                         |
+                                                             |
+                  +------------------------------------------+
+                  |
+                  v
+         Main Menu Loop (main function)
