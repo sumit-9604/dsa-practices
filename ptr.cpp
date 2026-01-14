@@ -3,7 +3,7 @@
 #include<algorithm>
 using namespace std;
 
-int bsearch(int arr[],int n,int t){      //[O(log n)]
+int bsearch(int arr[],int n,int t){      //[O(log n)] || [T(n) = 2T(n/2) + O(n)]
     int st=0;
     int end=n-1;
 
